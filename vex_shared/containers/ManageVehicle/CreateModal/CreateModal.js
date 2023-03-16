@@ -1,0 +1,58 @@
+import React, { useEffect } from 'react';
+import { useIntl } from 'react-intl';
+import { useDispatch } from 'react-redux';
+import { Modal } from 'antd';
+import '@iso/cra/src/index.css';
+
+import { ExclamationCircleFilled } from '@ant-design/icons';
+import actions from '@iso/vex_redux/vehicle/service/vehicle/actions';
+
+import ModalTemplate from '@iso/vex_components/ModalTemplate/ModalTemplate';
+import useRawFields from '../hook/useRawFields';
+
+const CreateModal = ({ open, setOpen }) => {
+  const { confirm } = Modal;
+  const intl = useIntl();
+  const { createVehicle } = actions;
+
+  const dispatch = useDispatch();
+  const { rawFields } = useRawFields();
+
+  //confirm and dispatch create vehicle action
+  function confirmCreateVehicleHandle() {
+    const vehicleData = this;
+
+    console.log('vehicleData', vehicleData);
+    confirm({
+      title: intl.formatMessage({ id: 'text.confirmCreateVehicle' }),
+      icon: <ExclamationCircleFilled />,
+      content: intl.formatMessage({
+        id: 'text.confirm.descriptionCreateVehicle',
+      }),
+      okText: intl.formatMessage({ id: 'text.ok' }),
+      cancelText: intl.formatMessage({ id: 'text.cancel' }),
+      onOk() {
+        dispatch(createVehicle(vehicleData));
+      },
+      onCancel() {
+        setOpen(true);
+      },
+    });
+  }
+
+  return (
+    <React.Fragment>
+      <ModalTemplate
+        open={open}
+        setOpen={setOpen}
+        titleModal={intl.formatMessage({ id: 'text.createVehicle' })}
+        okModal={intl.formatMessage({ id: 'text.create' })}
+        isAllowEdit={true}
+        confirmHandle={confirmCreateVehicleHandle}
+        rawFields={rawFields}
+      />
+    </React.Fragment>
+  );
+};
+
+export default CreateModal;

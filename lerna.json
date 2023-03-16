@@ -1,0 +1,11 @@
+{
+  "packages": [
+    "vex_shared/*",
+    "shared/*",
+    "packages/*",
+    "packages/isomorphic-boilerplate-graphql/*"
+  ],
+  "version": "independent",
+  "npmClient": "yarn",
+  "useWorkspaces": true
+}

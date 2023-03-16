@@ -1,0 +1,170 @@
+:root {
+  --line-height-ant-input: 19px;
+  --valid-bg: #005073;
+  --unvalid-bg: #cf0b0b;
+  --button-color: #1272b9;
+  --border-color: #cfcfcf;
+  ---font-family: '-apple-system, BlinkMacSystemFont, "Avenir Next", Avenir, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
+}
+
+body {
+  font-family: '-apple-system, BlinkMacSystemFont, "Avenir Next", Avenir, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
+}
+
+.flex {
+  display: flex !important;
+}
+
+.flex-space-between {
+  display: flex !important;
+  justify-content: space-between;
+}
+
+.flex-alct {
+  display: flex !important;
+  align-items: center;
+}
+
+.flex-spbt-alct {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-jtct-alct {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.opacity-50 {
+  opacity: 50%;
+}
+
+.hover-opacity-100:hover {
+  opacity: 100%;
+}
+
+.remove-hover-bh:hover {
+  background-color: transparent !important;
+}
+
+.border-radius-5 {
+  border-radius: 5px;
+}
+
+/* start css antd */
+.dropdown-menu {
+  position: relative;
+  left: 60px;
+  background-color: white;
+  padding: 20px 10px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+/* scroll bar */
+/* width */
+.custom-crollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.custom-crollbar::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 5px grey; */
+  border-radius: 10px;
+}
+
+/* Handle */
+.custom-crollbar:hover::-webkit-scrollbar-thumb {
+  background: #d1d1d1;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.custom-crollbar::-webkit-scrollbar-thumb:hover {
+  background: rgb(190, 190, 190);
+}
+
+/* antd */
+.dropdown-item {
+  height: 30px;
+  line-height: 30px;
+  cursor: pointer;
+  padding: 0px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #262c2d;
+  user-select: none;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* select antd */
+.ant-select-selection-search-input {
+  height: 21.5px !important;
+}
+.ant-select-selector {
+  height: 21.5px !important;
+}
+.ant-select-selection-placeholder {
+  line-height: var(--line-height-ant-input) !important;
+}
+.ant-select-selection-item {
+  font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir,
+    'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 13px;
+  line-height: var(--line-height-ant-input) !important;
+  color: #262c2d !important;
+}
+
+.ant-select-dropdown {
+  border-radius: 10px !important;
+  /* border: 1px solid #6cbdff; */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-sizing: border-box !important;
+  padding: 4px;
+}
+
+.ant-select-item-option {
+  font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir,
+    'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol' !important;
+  font-size: 13px !important;
+}
+
+.ant-select-item-option-active {
+  border-radius: 5px !important;
+}
+
+/* upload ant */
+/* .ant-upload-list-item {
+  border-radius: 50% !important;
+}
+
+.ant-upload-list-item-image {
+  border-radius: 50% !important;
+}
+*/
+.ant-upload-list-item-info {
+  border-radius: 5px !important;
+}
+
+.ant-upload-list-picture-card-container {
+  width: 58px !important;
+  height: 58px !important;
+  margin: 0 8px 0 0 !important;
+}
+
+.ant-upload-list-item {
+  padding: 0px !important;
+}
+
+.ant-upload-list-item-name {
+  bottom: -5px !important;
+}

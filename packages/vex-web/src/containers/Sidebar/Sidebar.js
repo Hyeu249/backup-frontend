@@ -1,0 +1,127 @@
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Layout } from 'antd';
+import options from './options';
+import Scrollbars from '@iso/components/utility/customScrollBar';
+import Menu from '@iso/components/uielements/menu';
+import appActions from '@iso/redux/app/actions';
+import SidebarWrapper from './Sidebar.styles';
+import SidebarMenu from './SidebarMenu';
+import AccountSettings from '@iso/components/utility/AccountSettings/AccountSettings';
+import ExpandIcon from './ExpandIcon';
+
+const { Sider } = Layout;
+
+const { toggleOpenDrawer, changeOpenKeys, changeCurrent, toggleCollapsed } =
+  appActions;
+
+export default function Sidebar() {
+  const dispatch = useDispatch();
+  const { view, openKeys, collapsed, openDrawer, current, height } =
+    useSelector(state => state.App);
+  const customizedTheme = useSelector(
+    state => state.ThemeSwitcher.sidebarTheme
+  );
+
+  function handleClick(e) {
+    dispatch(changeCurrent([e.key]));
+    if (view === 'MobileView') {
+      setTimeout(() => {
+        dispatch(toggleCollapsed());
+        // dispatch(toggleOpenDrawer());
+      }, 100);
+
+      // clearTimeout(timer);
+    }
+  }
+  function onOpenChange(newOpenKeys) {
+    const latestOpenKey = newOpenKeys.find(
+      key => !(openKeys.indexOf(key) > -1)
+    );
+    const latestCloseKey = openKeys.find(
+      key => !(newOpenKeys.indexOf(key) > -1)
+    );
+    let nextOpenKeys = [];
+    if (latestOpenKey) {
+      nextOpenKeys = getAncestorKeys(latestOpenKey).concat(latestOpenKey);
+    }
+    if (latestCloseKey) {
+      nextOpenKeys = getAncestorKeys(latestCloseKey);
+    }
+    dispatch(changeOpenKeys(nextOpenKeys));
+  }
+  const getAncestorKeys = key => {
+    const map = {
+      sub3: ['sub2'],
+    };
+    return map[key] || [];
+  };
+
+  const isCollapsed = collapsed && !openDrawer;
+  const mode = isCollapsed === true ? 'vertical' : 'inline';
+  const onMouseEnter = event => {
+    if (collapsed && openDrawer === false) {
+      dispatch(toggleOpenDrawer());
+    }
+    return;
+  };
+  const onMouseLeave = () => {
+    if (collapsed && openDrawer === true) {
+      dispatch(toggleOpenDrawer());
+    }
+    return;
+  };
+  const styling = {
+    backgroundColor: customizedTheme.backgroundColor,
+  };
+
+  const submenuStyle = {
+    color: customizedTheme.textColor,
+  };
+  const submenuColor = {
+    color: customizedTheme.textColor,
+  };
+  return (
+    <SidebarWrapper>
+      <Sider
+        trigger={null}
+        collapsible={true}
+        collapsed={isCollapsed}
+        width={240}
+        className="isomorphicSidebar"
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+        style={styling}
+      >
+        <AccountSettings collapsed={isCollapsed} />
+        <Scrollbars style={{ height: height - 70 }}>
+          <Menu
+            onClick={handleClick}
+            theme="dark"
+            className="isoDashboardMenu"
+            mode={mode}
+            openKeys={isCollapsed ? [] : openKeys}
+            selectedKeys={current}
+            onOpenChange={onOpenChange}
+            // inlineCollapsed={isCollapsed}
+            collapsed={isCollapsed.toString() || undefined}
+            expandIcon={e => {
+              let style = { transform: 'rotate(-90deg)', color: '#7fa2bc' };
+              if (e.isOpen === true) style = {};
+              return <ExpandIcon style={style} />;
+            }}
+          >
+            {options.map(singleOption => (
+              <SidebarMenu
+                key={singleOption.key}
+                submenuStyle={submenuStyle}
+                submenuColor={submenuColor}
+                singleOption={singleOption}
+              />
+            ))}
+          </Menu>
+        </Scrollbars>
+      </Sider>
+    </SidebarWrapper>
+  );
+}

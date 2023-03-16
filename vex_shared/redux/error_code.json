@@ -1,0 +1,658 @@
+{
+  "errors": {
+    "1000": {
+      "error_code": 1000,
+      "en": "Asset warehouse not found.",
+      "vi": "Không tìm thấy kho tài sản."
+    },
+    "1001": {
+      "error_code": 1001,
+      "en": "Invalid asset warehouse UUID.",
+      "vi": "UUID của kho tài sản không hợp lệ."
+    },
+    "1002": {
+      "error_code": 1002,
+      "en": "Asset warehouse is required.",
+      "vi": "Kho tài sản là bắt buộc."
+    },
+    "1003": {
+      "error_code": 1003,
+      "en": "Object and action are invalid.",
+      "vi": "Đối tượng và hành động không hợp lệ."
+    },
+    "1004": {
+      "error_code": 1004,
+      "en": "Object doesn't have authorization action 'approve'.",
+      "vi": "Đối tượng không có hành động ủy quyền 'approve'."
+    },
+    "1005": {
+      "error_code": 1005,
+      "en": "Role is invalid.",
+      "vi": "Vai trò không hợp lệ."
+    },
+    "1006": {
+      "error_code": 1006,
+      "en": "User does not exist.",
+      "vi": "Người dùng không tồn tại."
+    },
+    "1007": {
+      "error_code": 1007,
+      "en": "Email already exists.",
+      "vi": "Email đã tồn tại.",
+      "field": "email"
+    },
+    "1008": {
+      "error_code": 1008,
+      "en": "Invalid approval status.",
+      "vi": "Trạng thái duyệt không hợp lệ."
+    },
+    "1009": {
+      "error_code": 1009,
+      "en": "Invalid equipment group UUID.",
+      "vi": "UUID của nhóm thiết bị không hợp lệ."
+    },
+    "1010": {
+      "error_code": 1010,
+      "en": "Equipment group not found.",
+      "vi": "Không tìm thấy nhóm thiết bị."
+    },
+    "1011": {
+      "error_code": 1011,
+      "en": "Invalid maintenance type UUID.",
+      "vi": "UUID của loại bảo trì không hợp lệ."
+    },
+    "1012": {
+      "error_code": 1012,
+      "en": "Maintenance type not found.",
+      "vi": "Không tìm thấy loại bảo trì."
+    },
+    "1013": {
+      "error_code": 1013,
+      "en": "Invalid equipment UUID.",
+      "vi": "UUID của thiết bị không hợp lệ."
+    },
+    "1014": {
+      "error_code": 1014,
+      "en": "Equipment not found.",
+      "vi": "Không tìm thấy thiết bị."
+    },
+    "1015": {
+      "error_code": 1015,
+      "en": "Invalid Warranty Party UUID.",
+      "vi": "UUID của bên bảo hành không hợp lệ."
+    },
+    "1016": {
+      "error_code": 1016,
+      "en": "Warranty Party not found.",
+      "vi": "Không tìm thấy bên bảo hành."
+    },
+    "1017": {
+      "error_code": 1017,
+      "en": "WarrantyParty phone already exists.",
+      "vi": "Số điện thoại của bên bảo hành đã tồn tại.",
+      "field": "phone"
+    },
+    "1018": {
+      "error_code": 1018,
+      "en": "WarrantyParty email already exists.",
+      "vi": "Email của bên bảo hành đã tồn tại.",
+      "field": "email"
+    },
+    "1019": {
+      "error_code": 1019,
+      "en": "MaintenanceType Name already exists.",
+      "vi": "Tên của loại bảo trì đã tồn tại.",
+      "field": "name"
+    },
+    "1020": {
+      "error_code": 1020,
+      "en": "Invalid Fuel UUID.",
+      "vi": "UUID của nhiên liệu không hợp lệ."
+    },
+    "1021": {
+      "error_code": 1021,
+      "en": "Fuel not found.",
+      "vi": "Không tìm thấy nhiên liệu."
+    },
+    "1022": {
+      "error_code": 1022,
+      "en": "Fuel Name already exists.",
+      "vi": "Tên của nhiên liệu đã tồn tại.",
+      "field": "name"
+    },
+    "1023": {
+      "error_code": 1023,
+      "en": "Invalid EquipmentAVehicleTypeConstraint UUID.",
+      "vi": "UUID của ràng buộc giữa thiết bị và loại xe không hợp lệ."
+    },
+    "1024": {
+      "error_code": 1024,
+      "en": "EquipmentAVehicleTypeConstraint not found.",
+      "vi": "Không tìm thấy ràng buộc giữa thiết bị và loại xe."
+    },
+    "1025": {
+      "error_code": 1025,
+      "en": "Equipment Already Linked To This VehicleType.",
+      "vi": "Thiết bị đã được liên kết với loại xe này."
+    },
+    "1026": {
+      "error_code": 1026,
+      "en": "Invalid EquipmentADriverAssignment UUID.",
+      "vi": "UUID của liên kết giữa thiết bị và tài xế không hợp lệ."
+    },
+    "1027": {
+      "error_code": 1027,
+      "en": "EquipmentADriverAssignment not found.",
+      "vi": "Không tìm thấy liên kết giữa thiết bị và tài xế."
+    },
+    "1028": {
+      "error_code": 1028,
+      "en": "Equipment already in use.",
+      "vi": "Thiết bị đã được sử dụng."
+    },
+    "1029": {
+      "error_code": 1029,
+      "en": "Equipment Already Linked To This VehicleDriver.",
+      "vi": "Thiết bị đã được liên kết với tài xế này."
+    },
+    "1030": {
+      "error_code": 1030,
+      "en": "Invalid EquipmentAVehicleAssignment UUID.",
+      "vi": "UUID của liên kết giữa thiết  bị và xe không hợp lệ."
+    },
+    "1031": {
+      "error_code": 1031,
+      "en": "EquipmentAVehicleAssignment not found.",
+      "vi": "Không tìm thấy liên kết giữa thiết bị và xe."
+    },
+    "1032": {
+      "error_code": 1032,
+      "en": "Equipment Already Linked To This Vehicle.",
+      "vi": "Thiết bị đã được liên kết với xe này."
+    },
+    "1033": {
+      "error_code": 1033,
+      "en": "Equipment is not the same type with this Vehicle.",
+      "vi": "Thiết bị không phải cùng loại với xe này.",
+      "field": "vehicle_id"
+    },
+    "1034": {
+      "error_code": 1034,
+      "en": "Valid_from's time cannot happen after valid_until's time.",
+      "vi": "Thời gian valid_from không được trễ hơn thời gian valid_until.",
+      "field": "start_km"
+    },
+    "1035": {
+      "error_code": 1035,
+      "en": "Start_km cannot be less than end_km.",
+      "vi": "Start_km không được nhỏ hơn end_km.",
+      "field": "start_km"
+    },
+    "1036": {
+      "error_code": 1036,
+      "en": "Missing approvers. Need at least one approver.",
+      "vi": "Thiếu người duyệt. Cần ít nhất một người duyệt."
+    },
+    "1037": {
+      "error_code": 1037,
+      "en": "Approver (user) does not exist or is inactive.",
+      "vi": "Người duyệt (người dùng) không tồn tại hoặc không hoạt động."
+    },
+    "1038": {
+      "error_code": 1038,
+      "en": "User is not allowed to handle this approval.",
+      "vi": "Người dùng không được phép xử lý yêu cầu duyệt này."
+    },
+    "1039": {
+      "error_code": 1039,
+      "en": "Image not found.",
+      "vi": "Không tìm thấy ảnh."
+    },
+    "1040": {
+      "error_code": 1040,
+      "en": "Image UUID is invalid.",
+      "vi": "UUID của ảnh không hợp lệ."
+    },
+    "1041": {
+      "error_code": 1041,
+      "en": "Invoice not found.",
+      "vi": "Không tìm thấy hóa đơn."
+    },
+    "1042": {
+      "error_code": 1042,
+      "en": "Invoice UUID is invalid.",
+      "vi": "UUID của hóa đơn không hợp lệ."
+    },
+    "1043": {
+      "error_code": 1043,
+      "en": "Invoice is not owned by this refuel request.",
+      "vi": "Hóa đơn không thuộc sở hữu của yêu cầu nạp nhiên liệu này."
+    },
+    "1044": {
+      "error_code": 1044,
+      "en": "Invoice is not owned by this service request.",
+      "vi": "Hóa đơn không thuộc sở hữu của yêu cầu bảo trì này."
+    },
+    "1045": {
+      "error_code": 1045,
+      "en": "Refuel date is in the past.",
+      "vi": "Ngày nạp nhiên liệu đã qua.",
+      "field": "refuel_date"
+    },
+    "1046": {
+      "error_code": 1046,
+      "en": "Refuel request UUID is invalid.",
+      "vi": "UUID của yêu cầu nạp nhiên liệu không hợp lệ."
+    },
+    "1047": {
+      "error_code": 1047,
+      "en": "Refuel request not found.",
+      "vi": "Không tìm thấy yêu cầu nạp nhiên liệu."
+    },
+    "1048": {
+      "error_code": 1048,
+      "en": "Service request UUID is invalid.",
+      "vi": "UUID của yêu cầu bảo trì không hợp lệ."
+    },
+    "1049": {
+      "error_code": 1049,
+      "en": "Service request not found.",
+      "vi": "Không tìm thấy yêu cầu bảo trì."
+    },
+    "1050": {
+      "error_code": 1050,
+      "en": "Tyre service request UUID is invalid.",
+      "vi": "UUID của yêu cầu bảo trì lốp không hợp lệ."
+    },
+    "1051": {
+      "error_code": 1051,
+      "en": "Tyre service request not found.",
+      "vi": "Không tìm thấy yêu cầu bảo trì lốp."
+    },
+    "1052": {
+      "error_code": 1052,
+      "en": "Tyre service request already assigned.",
+      "vi": "Yêu cầu bảo trì lốp đã được chỉ định.",
+      "field": "tyre_service_request_id_list"
+    },
+    "1053": {
+      "error_code": 1053,
+      "en": "Equipment service request UUID is invalid.",
+      "vi": "UUID của yêu cầu bảo trì thiết bị không hợp lệ."
+    },
+    "1054": {
+      "error_code": 1054,
+      "en": "Equipment service request not found.",
+      "vi": "Không tìm thấy yêu cầu bảo trì thiết bị."
+    },
+    "1055": {
+      "error_code": 1055,
+      "en": "Equipment service request already assigned.",
+      "vi": "Yêu cầu bảo trì thiết bị đã được chỉ định.",
+      "field": "equipment_service_request_id_list"
+    },
+    "1056": {
+      "error_code": 1056,
+      "en": "Supplier phone already exists.",
+      "vi": "Số điện thoại nhà cung cấp đã tồn tại.",
+      "field": "phone"
+    },
+    "1057": {
+      "error_code": 1057,
+      "en": "Supplier email already exists.",
+      "vi": "Email nhà cung cấp đã tồn tại.",
+      "field": "email"
+    },
+    "1058": {
+      "error_code": 1058,
+      "en": "Invalid supplier UUID.",
+      "vi": "UUID của nhà cung cấp không hợp lệ."
+    },
+    "1059": {
+      "error_code": 1059,
+      "en": "Supplier is not found.",
+      "vi": "Không tìm thấy nhà cung cấp."
+    },
+    "1060": {
+      "error_code": 1060,
+      "en": "Invalid contract UUID.",
+      "vi": "UUID của hợp đồng không hợp lệ."
+    },
+    "1061": {
+      "error_code": 1061,
+      "en": "Contract is not found.",
+      "vi": "Không tìm thấy hợp đồng."
+    },
+    "1062": {
+      "error_code": 1062,
+      "en": "Invalid supplier service UUID.",
+      "vi": "UUID của dịch vụ nhà cung cấp không hợp lệ."
+    },
+    "1063": {
+      "error_code": 1063,
+      "en": "Supplier service type is not found.",
+      "vi": "Không tìm thấy loại dịch vụ nhà cung cấp."
+    },
+    "1064": {
+      "error_code": 1064,
+      "en": "Invalid supplier quote UUID.",
+      "vi": "UUID của báo giá nhà cung cấp không hợp lệ."
+    },
+    "1065": {
+      "error_code": 1065,
+      "en": "Supplier quote is not found.",
+      "vi": "Không tìm thấy báo giá nhà cung cấp."
+    },
+    "1066": {
+      "error_code": 1066,
+      "en": "Supplier quote is not approved.",
+      "vi": "Báo giá nhà cung cấp chưa được duyệt."
+    },
+    "1067": {
+      "error_code": 1067,
+      "en": "Invalid fuel price quote UUID.",
+      "vi": "UUID của báo giá giá nhiên liệu không hợp lệ."
+    },
+    "1068": {
+      "error_code": 1068,
+      "en": "Fuel price quote is not found.",
+      "vi": "Không tìm thấy báo giá giá nhiên liệu."
+    },
+    "1069": {
+      "error_code": 1069,
+      "en": "Fuel price quote not approved.",
+      "vi": "Báo giá giá nhiên liệu chưa được duyệt."
+    },
+    "1070": {
+      "error_code": 1070,
+      "en": "Valid_from's time cannot happen after valid_until's time.",
+      "vi": "Thời gian 'hiệu lực từ' không thể diễn ra sau thời gian 'có hiệu lục đến'.",
+      "field": "valid_from"
+    },
+    "1071": {
+      "error_code": 1071,
+      "en": "Valid_from's time cannot happen after valid_until's time.",
+      "vi": "Thời gian 'hiệu lực từ' không thể diễn ra sau thời gian 'có hiệu lục đến'.",
+      "field": "valid_from"
+    },
+    "1072": {
+      "error_code": 1072,
+      "en": "Valid_from's time cannot happen after valid_until's time.",
+      "vi": "Thời gian 'hiệu lực từ' không thể diễn ra sau thời gian 'có hiệu lục đến'.",
+      "field": "valid_from"
+    },
+    "1073": {
+      "error_code": 1073,
+      "en": "Tyre SerialNo already exists",
+      "vi": "Số serial của lốp đã tồn tại",
+      "field": "serial_no"
+    },
+    "1074": {
+      "error_code": 1074,
+      "en": "valid_from's time cannot happen after valid_until's time",
+      "vi": "Thời gian bắt đầu của báo giá lốp không thể sau thời gian kết thúc",
+      "field": "valid_from"
+    },
+    "1075": {
+      "error_code": 1075,
+      "en": "start_time's time cannot happen after end_time's time",
+      "vi": "Thời gian bắt đầu của phân bổ lốp cho xe không thể sau thời gian kết thúc"
+    },
+    "1076": {
+      "error_code": 1076,
+      "en": "Tyre already in use",
+      "vi": "Lốp đang được sử dụng"
+    },
+    "1077": {
+      "error_code": 1077,
+      "en": "Tyre Already Linked To This Vehicle",
+      "vi": "Lốp đã được liên kết với xe này",
+      "field": "vehicle_id"
+    },
+    "1078": {
+      "error_code": 1078,
+      "en": "Invalid Tyre UUID.",
+      "vi": "UUID lốp không hợp lệ."
+    },
+    "1079": {
+      "error_code": 1079,
+      "en": "Tyre not found.",
+      "vi": "Không tìm thấy lốp xe."
+    },
+    "1080": {
+      "error_code": 1080,
+      "en": "Invalid tyre price quote UUID.",
+      "vi": "UUID báo giá lốp xe không hợp lệ."
+    },
+    "1081": {
+      "error_code": 1081,
+      "en": "Tyre price quote not found.",
+      "vi": "Không tìm thấy báo giá lốp xe."
+    },
+    "1082": {
+      "error_code": 1082,
+      "en": "Tyre price quote not approved.",
+      "vi": "Báo giá lốp xe chưa được phê duyệt."
+    },
+    "1083": {
+      "error_code": 1083,
+      "en": "Invalid TyreAVehicleAssignment UUID.",
+      "vi": "UUID gán lốp xe không hợp lệ."
+    },
+    "1084": {
+      "error_code": 1084,
+      "en": "TyreAVehicleAssignment not found.",
+      "vi": "Không tìm thấy thông tin gán lốp xe."
+    },
+    "1085": {
+      "error_code": 1085,
+      "en": "username already exists",
+      "vi": "tên đăng nhập đã tồn tại"
+    },
+    "1086": {
+      "error_code": 1086,
+      "en": "incorrect username or/and password",
+      "vi": "tên đăng nhập hoặc/ và mật khẩu không chính xác"
+    },
+    "1087": {
+      "error_code": 1087,
+      "en": "Invalid user UUID",
+      "vi": "UUID người dùng không hợp lệ"
+    },
+    "1088": {
+      "error_code": 1088,
+      "en": "user not found",
+      "vi": "không tìm thấy người dùng"
+    },
+    "1089": {
+      "error_code": 1089,
+      "en": "driver is not found",
+      "vi": "không tìm thấy tài xế"
+    },
+    "1090": {
+      "error_code": 1090,
+      "en": "driver UUID is invalid",
+      "vi": "UUID tài xế không hợp lệ"
+    },
+    "1091": {
+      "error_code": 1091,
+      "en": "driver doc type is not found",
+      "vi": "không tìm thấy loại giấy tờ tài xế"
+    },
+    "1092": {
+      "error_code": 1092,
+      "en": "driver doc type UUID is invalid",
+      "vi": "UUID loại giấy tờ tài xế không hợp lệ"
+    },
+    "1093": {
+      "error_code": 1093,
+      "en": "driver doc is not found",
+      "vi": "không tìm thấy giấy tờ tài xế"
+    },
+    "1094": {
+      "error_code": 1094,
+      "en": "driver doc UUID is invalid",
+      "vi": "UUID giấy tờ tài xế không hợp lệ"
+    },
+    "1095": {
+      "error_code": 1095,
+      "en": "driver deposit type is not found",
+      "vi": "không tìm thấy loại đặt cọc tài xế",
+      "field": "driver_deposit_type_id"
+    },
+    "1096": {
+      "error_code": 1096,
+      "en": "driver deposit type UUID is invalid",
+      "vi": "UUID loại đặt cọc tài xế không hợp lệ"
+    },
+    "1097": {
+      "error_code": 1097,
+      "en": "driver doc - image is not found",
+      "vi": "không tìm thấy hình ảnh giấy tờ tài xế"
+    },
+    "1098": {
+      "error_code": 1098,
+      "en": "Driver document - image relation does not exist.",
+      "vi": "Mối quan hệ hình ảnh tài liệu lái xe không tồn tại."
+    },
+    "1099": {
+      "error_code": 1099,
+      "en": "Driver phone already exists.",
+      "vi": "Số điện thoại lái xe đã tồn tại.",
+      "field": "phone"
+    },
+    "1100": {
+      "error_code": 1100,
+      "en": "Driver email already exists.",
+      "vi": "Email lái xe đã tồn tại.",
+      "field": "email"
+    },
+    "1101": {
+      "error_code": 1101,
+      "en": "Driver tax ID already exists.",
+      "vi": "Mã số thuế lái xe đã tồn tại.",
+      "field": "tax_id"
+    },
+    "1102": {
+      "error_code": 1102,
+      "en": "Driver National ID card already exists.",
+      "vi": "Chứng minh thư nhân dân lái xe đã tồn tại.",
+      "field": "national_id_card_no"
+    },
+    "1103": {
+      "error_code": 1103,
+      "en": "Driver document does not exist.",
+      "vi": "Tài liệu lái xe không tồn tại."
+    },
+    "1104": {
+      "error_code": 1104,
+      "en": "Wrong input of job_status field vehicle driver.",
+      "vi": "Nhập sai giá trị của trường trạng thái công việc của tài xế xe."
+    },
+    "1105": {
+      "error_code": 1105,
+      "en": "Vehicle is not found.",
+      "vi": "Xe không tìm thấy."
+    },
+    "1106": {
+      "error_code": 1106,
+      "en": "Vehicle UUID is invalid.",
+      "vi": "UUID của xe không hợp lệ."
+    },
+    "1107": {
+      "error_code": 1107,
+      "en": "Vehicle driver is not found.",
+      "vi": "Tài xế của xe không tìm thấy."
+    },
+    "1108": {
+      "error_code": 1108,
+      "en": "Vehicle driver UUID is invalid.",
+      "vi": "UUID của tài xế xe không hợp lệ."
+    },
+    "1109": {
+      "error_code": 1109,
+      "en": "Trailer UUID is invalid.",
+      "vi": "UUID của rơ móc không hợp lệ."
+    },
+    "1110": {
+      "error_code": 1110,
+      "en": "Trailer is not found.",
+      "vi": "Rơ móc không tìm thấy."
+    },
+    "1111": {
+      "error_code": 1111,
+      "en": "Semi truck is not found.",
+      "vi": "Xe tải đầu kéo không tìm thấy."
+    },
+    "1112": {
+      "error_code": 1112,
+      "en": "Vehicle type is not found.",
+      "vi": "Loại xe không tìm thấy."
+    },
+    "1113": {
+      "error_code": 1113,
+      "en": "Vehicle type UUID is invalid.",
+      "vi": "UUID của loại xe không hợp lệ."
+    },
+    "1114": {
+      "error_code": 1114,
+      "en": "Vehicle document type is not found.",
+      "vi": "Loại tài liệu xe không tìm thấy."
+    },
+    "1115": {
+      "error_code": 1115,
+      "en": "vehicle document type UUID is invalid.",
+      "vi": "UUID loại tài liệu xe không hợp lệ."
+    },
+    "1116": {
+      "error_code": 1116,
+      "en": "vehicle document is not found.",
+      "vi": "Tài liệu xe không tìm thấy."
+    },
+    "1117": {
+      "error_code": 1117,
+      "en": "vehicle document UUID is invalid.",
+      "vi": "UUID tài liệu xe không hợp lệ."
+    },
+    "1118": {
+      "error_code": 1118,
+      "en": "trailer is still attached to other semi truck.",
+      "vi": "Rơ moóc vẫn đang kết nối với xe tải khác."
+    },
+    "1119": {
+      "error_code": 1119,
+      "en": "semi truck is still attached to other trailer.",
+      "vi": "Xe tải vẫn đang kết nối với rơ moóc khác."
+    },
+    "1120": {
+      "error_code": 1120,
+      "en": "semi truck/trailer is still attached to other trailer/semi truck.",
+      "vi": "Xe tải/rơ moóc vẫn đang kết nối với rơ moóc/xe tải khác."
+    },
+    "1121": {
+      "error_code": 1121,
+      "en": "the trailer is not attached to the semi truck.",
+      "vi": "Rơ moóc không được kết nối với xe tải."
+    },
+    "1122": {
+      "error_code": 1122,
+      "en": "vehicle document does not exist.",
+      "vi": "Tài liệu xe không tồn tại."
+    },
+    "1123": {
+      "error_code": 1123,
+      "en": "vehicle does not have this image",
+      "vi": "Xe không có hình này"
+    },
+    "1124": {
+      "error_code": 1124,
+      "en": "vehicle document does not have this image",
+      "vi": "Tài liệu xe không có hình này"
+    },
+    "1125": {
+      "error_code": 1125,
+      "en": "password reset token is invalid",
+      "vi": "Mã xác nhận đặt lại mật khẩu không hợp lệ"
+    }
+  }
+}
